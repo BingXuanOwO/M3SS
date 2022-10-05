@@ -1,0 +1,91 @@
+/*====全部按钮====*/
+.m3ss-button{
+    display: inline-flex;
+    position: relative;
+
+    padding:0 24px;
+    margin: 4px;
+
+    height: 40px;
+    border-radius: 40px;
+
+    transition: .3s;
+
+    align-items:center;
+
+    cursor: pointer;
+}
+.m3ss-button::after{
+    z-index: -1;
+}
+/*==filled(default)==*/
+.m3ss-button.filled,.m3ss-button{
+    color:var(--md-sys-color-on-primary)
+}
+.m3ss-button.filled::after,.m3ss-button::after{
+    content: "";
+
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position:absolute;
+    border-radius: 40px;
+
+    background-color: var(--md-sys-color-primary);
+}
+/*==filled-tonal==*/
+.m3ss-button.tonal{
+    color:var(--md-sys-color-secondary)
+}
+.m3ss-button.tonal::after{
+    background-color: var(--md-sys-color-secondary-container)
+}
+/*==elevated==*/
+.m3ss-button.elevated{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    color:var(--md-sys-color-primary);
+}
+.m3ss-button.elevated::after{
+    background-color: var(--md-sys-color-primary);
+    color:var(--md-sys-color-primary);
+    opacity: var(--md-sys-elevation-level1);
+}
+/*==outlined==*/
+.m3ss-button.outlined{
+    color:var(--md-sys-color-primary);
+    border: 1.5px solid var(--md-sys-color-outline);
+    height: 37px;
+}
+.m3ss-button.outlined::after{
+    background:none;
+}
+/*==text==*/
+.m3ss-button.text{
+    padding:0 12px;
+    color: var(--md-sys-color-primary);
+}
+.m3ss-button.text::after{
+    background:none;
+}
+/*==normal with icon==*/
+.m3ss-button.icon-left:not(.text){
+    padding-left: 16px;
+}
+.m3ss-button.icon-right:not(.text){
+    padding-right: 16px;
+}
+
+.m3ss-button.icon-left.text{
+    padding-right: 16px;
+}
+.m3ss-button.icon-right.text{
+    padding-right: 16px;
+}
+
+.m3ss-button.icon-left .icon:first-child{
+    padding-right:8px;
+}
+.m3ss-button.icon-right .icon:first-child{
+    padding-left:8px;
+}
