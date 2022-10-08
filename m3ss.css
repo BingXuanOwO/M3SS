@@ -11,6 +11,11 @@
     --md-sys-elevation-level4:12%;
     --md-sys-elevation-level5:14%;
 
+    --md-sys-state-hover-state-layer-opacity:8%;
+    --md-sys-state-focus-state-layer-opacity:12%;
+    --md-sys-state-pressed-state-layer-opacity:12%;
+    --md-sys-state-dragged-state-layer-opacity:16%;
+
 
 
 

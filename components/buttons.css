@@ -1,4 +1,6 @@
-/*====全部按钮====*/
+/*===============
+      全部按钮
+=================*/
 .m3ss-button{
     display: inline-flex;
     position: relative;
@@ -23,20 +25,8 @@
 
     overflow:hidden;
 }
+/*state-layer*/
 .m3ss-button::after{
-    content: "";
-
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    position:absolute;
-    border-radius: 40px;
-
-    z-index: -2;
-    transition: .3s;
-}
-.m3ss-button::before:not(.fab){
     content: "";
 
     height: 100%;
@@ -49,50 +39,78 @@
     z-index: -1;
     transition: .3s;
 }
+/*background-layer*/
+.m3ss-button::before{
+    content: "";
 
-/*==filled(default)==*/
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position:absolute;
+    border-radius: 40px;
+
+    z-index: -2;
+    transition: .3s;
+}
+
+
+
+
+
+/*====filled(default)====*/
 .m3ss-button{
     color:var(--md-sys-color-on-primary);
 }
-.m3ss-button:active:not(.text,.elevated,.outlined){
-    box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
-}
 .m3ss-button::after{
-    background-color: var(--md-sys-color-primary);
-    opacity: 1;
-}
-.m3ss-button::before{
     background-color: var(--md-sys-color-on-surface);
     opacity: 0;
 }
-/*-hover-*/
-.m3ss-button.filled:hover::before{
+.m3ss-button::before{
+    background-color: var(--md-sys-color-primary);
+    opacity: 1;
+}
+
+/*==hover==*/
+.m3ss-button.filled:hover::after{
     opacity: 8%;
 }
-.m3ss-button.filled:focus::before{
+.m3ss-button.filled:focus::after{
     opacity: 12%;
-}
-.m3ss-button.filled:focus::after::after{
-    content: "";
-}
-/*-ripple-*/
+}  
+
+/*==ripple==*/
 .m3ss-button .m3ss-ripple{
     background-color: var(--md-sys-color-surface);
 }
+
+/*==clicked==*/
+.m3ss-button:active:not(.text,.elevated,.outlined){
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+}
+
+
+
+
 
 
 /*==filled-tonal==*/
 .m3ss-button.tonal{
     color:var(--md-sys-color-secondary);
-    background-color: var(--md-sys-color-secondary-container)
 }
 .m3ss-button.tonal::after{
     background: none;
 }
+.m3ss-button.tonal::before{
+    background-color: var(--md-sys-color-secondary-container)
+}
+
 /*-ripple-*/
 .m3ss-button.tonal .m3ss-ripple{
     background-color: var(--md-sys-color-on-surface);
 }
+
+
 
 
 /*==elevated==*/
@@ -102,19 +120,35 @@
     background:none;
 }
 .m3ss-button.elevated::after{
+
+}
+.m3ss-button.elevated::before{
     background-color: var(--md-sys-color-primary);
     color:var(--md-sys-color-primary);
     opacity: var(--md-sys-elevation-level1);
 }
-.m3ss-button.elevated::before{content: none;}
+
 /*-hover-*/
 .m3ss-button.elevated:hover::after{
-    opacity: 8%;
+    opacity: var(--md-sys-elevation-level2);
 }
+
+/*-clicked-*/
+.m3ss-button.elevated:active::after{
+    opacity: var(--md-sys-elevation-level1);
+}
+
+/*-focus-*/
+.m3ss-button.elevated:focus::after{
+    opacity: var(--md-sys-elevation-level1);
+}
+
 /*-ripple-*/
 .m3ss-button.elevated .m3ss-ripple{
     background-color:var(--md-sys-color-primary);
 }
+
+
 
 
 
@@ -123,34 +157,50 @@
     color:var(--md-sys-color-primary);
     border: 1.5px solid var(--md-sys-color-outline);
     height: 37px;
-    background:none;
+    background: none;
 }
 .m3ss-button.outlined::after{
-    background:none;
+    background: none;
 }
-.m3ss-button.outlined::before{content: none;}
+.m3ss-button.outlined::before{
+    background: none;
+}
+
 /*-ripple-*/
 .m3ss-button.outlined .m3ss-ripple{
     background-color:var(--md-sys-color-primary);
 }
 
-/*==text==*/
+
+
+
+
+/*====text====*/
 .m3ss-button.text{
     padding:0 12px;
     color: var(--md-sys-color-primary);
     background:none;
 }
+/*state-layer*/
 .m3ss-button.text::after{
     background:none;
 }
-.m3ss-button.text::before{content: none;}
-/*-ripple-*/
+/*background-layer*/
+.m3ss-button.text::before{
+    background:none;
+}
+
+/*==ripple==*/
 .m3ss-button.text .m3ss-ripple{
     background-color:var(--md-sys-color-primary);
 }
 
 
-/*==Normal with icon==*/
+
+
+
+
+/*====with icon====*/
 .m3ss-button.icon-left:not(.text){
     padding-left: 16px;
 }
@@ -172,7 +222,12 @@
     padding-left:8px;
 }
 
-/*====Float-Action-Button====*/
+
+
+
+
+
+/*====FAB====*/
 .m3ss-button.fab{
     background: var(--md-sys-color-primary-container);
     box-shadow: 0 1px 5px rgba(0, 0, 0, .4);
@@ -186,7 +241,7 @@
 
     color:var(--md-sys-color-on-primary-container)
 }
-
+/*state-layer*/
 .m3ss-button.fab::after{
     background-color:var(--md-sys-color-primary-container);
 
@@ -199,26 +254,37 @@
     background-color: var(--md-sys-color-on-primary-container);
 }
 
-/*==Small-Fab==*/
+
+
+
+
+/*====Small-Fab====*/
 .m3ss-button.fab.small{
     border-radius: 12px;
     padding: 8px;
 }
+/*state-layer*/
 .m3ss-button.fab::after{
     border-radius: 12px;
 }
-/*-clicked ripple-*/
+/*==clicked ripple==*/
 .m3ss-button.fab.small .m3ss-ripple{
     background-color: var(--md-sys-color-on-primary-container);
 }
 
-/*==Small-Fab==*/
+
+
+
+
+
+/*==Large-Fab==*/
 .m3ss-button.fab.large{
     border-radius: 28px;
     padding: 30px;
     height: 36px;
     width: 36px;
 }
+/*state-layer*/
 .m3ss-button.fab::after{
     border-radius: 28px;
 }
@@ -229,6 +295,12 @@
 .m3ss-button.fab.large span{
     font-size: 36px;
 }
+
+
+
+
+
+
 /*====Ripple====*/
 .m3ss-button .m3ss-ripple{
     position: absolute;
