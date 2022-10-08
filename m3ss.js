@@ -15,16 +15,16 @@ class m3ss{
             let radius = button.clientWidth > button.clientHeight ?
                             button.clientWidth :
                             button.clientHeight;
-    
+
             let ripple = document.createElement('div')
             ripple.style.top = (button.clientHeight / 2) - 5 + "px";
             ripple.style.left = (button.clientWidth / 2) - 5 + "px";
             button.appendChild(ripple);
             ripple.setAttribute('class','m3ss-ripple');
 
-            ripple.style.top = "-" + (radius - button.clientHeight) / 2 + "px";
+            ripple.style.top = "-" + (radius * 1.2 - button.clientHeight) / 2 + "px";
             ripple.style.left = "-" + (radius * 1.2 - button.clientWidth) / 2 + "px";
-            ripple.style.height = radius + "px";
+            ripple.style.height = radius * 1.2 + "px";
             ripple.style.width = radius * 1.2 +"px";
 
             setTimeout(()=>{ ripple.style.opacity = 0; },100)
@@ -47,9 +47,9 @@ class m3ss{
 
             button.appendChild(ripple);
     
-            ripple.style.top = "-" + (radius - button.clientHeight) / 2 + "px";
+            ripple.style.top = "-" + (radius * 1.2 - button.clientHeight) / 2 + "px";
             ripple.style.left = "-" + (radius * 1.2 - button.clientWidth) / 2 + "px";
-            ripple.style.height = radius + "px";
+            ripple.style.height = radius * 1.2 + "px";
             ripple.style.width = radius * 1.2 +"px";
     
             document.onmouseup = () => { ripple.style.opacity = 0; }
