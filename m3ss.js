@@ -73,8 +73,8 @@ class m3ss{
                 ripple.style.transition = ".6s"; 
             },450)
     
-            //固定时间后移除ripple效果对应dom节点
-            // setTimeout(()=>{ ripple.remove(); },1500)
+            // 固定时间后移除ripple效果对应dom节点
+            setTimeout(()=>{ ripple.remove(); },1200)
         })
     }
 }

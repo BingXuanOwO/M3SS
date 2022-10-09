@@ -209,16 +209,29 @@
     border-radius: 16px;
 
     padding: 16px;
+    padding-right: 8px;
 
     color:var(--md-sys-color-on-primary-container);
-  
+    transition: .3s;
 }
+
 .m3ss-button.fab::before{
     background: var(--md-sys-color-primary-container);
 }
 .m3ss-button.fab::after{
     background-color:var(--md-sys-color-on-primary-container);
     opacity: 0;
+}
+
+.m3ss-button.fab label{
+    max-width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: .2s;
+}
+.m3ss-button.fab span{
+    transition: .3s;
+    padding-right: 8px;
 }
 /*-clicked ripple-*/
 .m3ss-button.fab .m3ss-ripple{
@@ -257,8 +270,42 @@
 
 
 
+/*==Extened FAB With Icon==*/
+.m3ss-button.fab.extened-icon{
+    padding-right: 16px;
+}
+.m3ss-button.fab.extened-icon span{
+    padding-right: 16px;
+}
+.m3ss-button.fab.extened-icon label{
+    max-width: 200px;
+    min-width: 24px;
+    white-space: nowrap;
+}
+
+
+
+/*==Extened FAB Without Icon==*/
+.m3ss-button.fab.extened{
+    padding-right: 16px;
+}
+.m3ss-button.fab.extened span{
+    padding-right: 16px;
+}
+.m3ss-button.fab.extened label{
+    max-width: none;
+    white-space: nowrap;
+    text-align: center;
+    min-width: 48px;
+}
+
+
+
 
 /*====Small-Fab====*/
+.m3ss-button.fab.small span{
+    padding: 0;
+}
 .m3ss-button.fab.small{
     border-radius: 12px;
     padding: 8px;
@@ -280,6 +327,7 @@
 }
 .m3ss-button.fab.large span{
     font-size: 36px;
+    padding: 0;
 }
 
 
