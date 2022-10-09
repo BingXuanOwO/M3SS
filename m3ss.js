@@ -34,7 +34,7 @@ class m3ss{
 
             //放开鼠标或在固定时间后逐渐将ripple效果透明度降至0
             setTimeout(()=>{ ripple.style.opacity = 0; },100)
-            
+
             //固定时间后移除ripple效果对应dom节点
             setTimeout(()=>{ ripple.remove(); },1500)
         })
@@ -46,7 +46,7 @@ class m3ss{
             let innery = e.clientY - button.offsetTop;
     
             //获取对角线长度，作为ripple直径
-            let radius = Math.sqrt(Math.pow(button.clientWidth,2) + Math.pow(button.clientHeight,2))
+            let radius = Math.sqrt(Math.pow(button.clientWidth,2) + Math.pow(button.clientHeight,2)) * 1.1
 
             //生成一个圆，作为ripple效果
             let ripple = document.createElement('div')
@@ -64,11 +64,17 @@ class m3ss{
             ripple.style.width = radius + "px";
     
             //放开鼠标或在固定时间后逐渐将ripple效果透明度降至0
-            document.onmouseup = () => { ripple.style.opacity = 0; }
-            setTimeout(()=>{ ripple.style.opacity = 0; },400)
+            document.onmouseup = () => { setTimeout(()=>{ 
+                ripple.style.opacity = 0; 
+                ripple.style.transition = ".6s"; 
+            },50)}
+            setTimeout(()=>{ 
+                ripple.style.opacity = 0; 
+                ripple.style.transition = ".6s"; 
+            },450)
     
             //固定时间后移除ripple效果对应dom节点
-            setTimeout(()=>{ ripple.remove(); },1500)
+            // setTimeout(()=>{ ripple.remove(); },1500)
         })
     }
 }
