@@ -69,16 +69,13 @@
     background-color: var(--md-sys-color-primary);
     opacity: 1;
 }
-
-
 /*-ripple-*/
 .m3ss-button .m3ss-ripple{
     background-color: var(--md-sys-color-surface);
 }
-
 /*-clicked-*/
-.m3ss-button:active:not(.text,.elevated,.outlined){
-    box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+.m3ss-button:active:not(.text,.elevated,.outlined,.fab){
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .4);
 }
 
 
@@ -213,19 +210,28 @@
 
     padding: 16px;
 
-    color:var(--md-sys-color-on-primary-container)
+    color:var(--md-sys-color-on-primary-container);
+  
 }
 .m3ss-button.fab::before{
     background: var(--md-sys-color-primary-container);
 }
 .m3ss-button.fab::after{
-    background-color:var(--md-sys-color-primary-container);
-
+    background-color:var(--md-sys-color-on-primary-container);
     opacity: 0;
 }
 /*-clicked ripple-*/
 .m3ss-button.fab .m3ss-ripple{
     background-color: var(--md-sys-color-on-primary-container);
+}
+.m3ss-button.fab.secondary .m3ss-ripple{
+    background-color: var(--md-sys-color-on-secondary-container);
+}
+.m3ss-button.fab.tertiary .m3ss-ripple{
+    background-color: var(--md-sys-color-on-tertiary-container);
+}
+.m3ss-button.fab.surface .m3ss-ripple{
+    background-color: var(--md-sys-color-on-surface);
 }
 /*-color mappings-*/
 .m3ss-button.fab.secondary{
@@ -234,14 +240,16 @@
 .m3ss-button.fab.secondary::before{
     background-color: var(--md-sys-color-secondary-container);
 }
+
 .m3ss-button.fab.tertiary{
     color: var(--md-sys-color-on-tertiary-container);
 }
 .m3ss-button.fab.tertiary::before{
     background-color: var(--md-sys-color-tertiary-container);
 }
+
 .m3ss-button.fab.surface{
-    color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-primary);
 }
 .m3ss-button.fab.surface::before{
     background-color: var(--md-sys-color-surface);
