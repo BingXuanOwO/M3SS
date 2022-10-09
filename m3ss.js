@@ -13,6 +13,9 @@ class m3ss{
         //键盘触发
         button.addEventListener('click',(event)=>{
             if(event.pointerId != -1 && event.mozInputSource != 6){ return; }
+            if(button.classList.contains("disabled")){
+                return;
+            }
     
             //获取对角线长度，作为ripple直径
             let radius = Math.sqrt(Math.pow(button.clientWidth,2) + Math.pow(button.clientHeight,2))
@@ -41,6 +44,9 @@ class m3ss{
 
         //鼠标触发
         button.addEventListener('mousedown', (e)=>{
+            if(button.classList.contains("disabled")){
+                return;
+            }
             //获取鼠标相对位置
             let innerx = e.clientX - button.offsetLeft;
             let innery = e.clientY - button.offsetTop;

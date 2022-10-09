@@ -74,7 +74,7 @@
     background-color: var(--md-sys-color-surface);
 }
 /*-clicked-*/
-.m3ss-button:active:not(.text,.elevated,.outlined,.fab){
+.m3ss-button:active:not(.disabled,.text,.elevated,.outlined,.fab){
     box-shadow: 0 1px 5px rgba(0, 0, 0, .4);
 }
 
@@ -228,6 +228,7 @@
     overflow: hidden;
     white-space: nowrap;
     transition: .2s;
+
 }
 .m3ss-button.fab span{
     transition: .3s;
@@ -275,12 +276,13 @@
     padding-right: 16px;
 }
 .m3ss-button.fab.extened-icon span{
-    padding-right: 16px;
+    padding-right: 10px;
 }
 .m3ss-button.fab.extened-icon label{
-    max-width: 200px;
+    max-width: 150px;
     min-width: 24px;
     white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 
@@ -355,9 +357,6 @@
 
 
 
-
-
-
 /*====State-layers====*/
 .m3ss-button:hover::after{
     opacity: var(--md-sys-state-hover-state-layer-opacity);
@@ -367,4 +366,23 @@
 }
 .m3ss-button:focus::after{
     opacity: var(--md-sys-state-focus-state-layer-opacity);
+}
+
+
+
+
+/*====Disabled====*/
+.m3ss-button.disabled,.m3ss-button.fab.disabled{
+    color: var(--md-sys-color-on-surface);
+    opacity: 38%;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+.m3ss-button.disabled::before,.m3ss-button.fab.disabled::before{
+    background-color: var(--md-sys-color-on-surface);
+    opacity: 12%;
+}
+.m3ss-button.disabled::after,.m3ss-button.fab.disabled::after{
+    content: "";
+    background: none;
 }
