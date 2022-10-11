@@ -2,19 +2,17 @@
 @import url(./components/buttons.css);
 
 
-
-
 :root {
-    --md-sys-elevation-level1:3%;
-    --md-sys-elevation-level2:8%;
-    --md-sys-elevation-level3:11%;
-    --md-sys-elevation-level4:12%;
-    --md-sys-elevation-level5:14%;
+    --md-sys-elevation-level1: 3%;
+    --md-sys-elevation-level2: 8%;
+    --md-sys-elevation-level3: 11%;
+    --md-sys-elevation-level4: 12%;
+    --md-sys-elevation-level5: 14%;
 
-    --md-sys-state-hover-state-layer-opacity:8%;
-    --md-sys-state-focus-state-layer-opacity:12%;
-    --md-sys-state-pressed-state-layer-opacity:12%;
-    --md-sys-state-dragged-state-layer-opacity:16%;
+    --md-sys-state-hover-state-layer-opacity: 8%;
+    --md-sys-state-focus-state-layer-opacity: 12%;
+    --md-sys-state-pressed-state-layer-opacity: 12%;
+    --md-sys-state-dragged-state-layer-opacity: 16%;
 
 
 
@@ -46,7 +44,7 @@
     --md-sys-color-inverse-on-surface: var(--md-sys-color-inverse-on-surface-light);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root{
         --md-sys-color-primary: var(--md-sys-color-primary-dark);
         --md-sys-color-on-primary: var(--md-sys-color-on-primary-dark);
@@ -74,11 +72,10 @@
         --md-sys-color-inverse-surface: var(--md-sys-color-inverse-surface-dark);
         --md-sys-color-inverse-on-surface: var(--md-sys-color-inverse-on-surface-dark);
     }
-}
+} */
 
 
-
-body.mdss-background::after{
+body.mdss-background::after {
     content: "";
     position: fixed;
 

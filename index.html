@@ -10,41 +10,54 @@
     <link rel="stylesheet" href="color.css">
     <script src="m3ss.js"></script>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
 <body class="mdss-background">
-    <div class="buttons" style="display:flex;flex-wrap: wrap;">
+    <div class="common-buttons" style="display:flex;flex-wrap: wrap;">
         <a href="javascript:void (0)" class="m3ss-button elevated icon-left"><span class="icon material-symbols-outlined">add</span>Elevated button</a>
         <a href="javascript:void (0)" class="m3ss-button elevated icon-right">Elevated button<span class="icon material-symbols-outlined">add</span></a>
         <a href="javascript:void (0)" class="m3ss-button elevated">Elevated button</a>
-        <a href="javascript:void (0)" class="m3ss-button disabled">Elevated button</a>
-        <a href="javascript:void (0)" class="m3ss-button filled">Filled button</a>
+        <a href="javascript:void (0)" class="m3ss-button disabled">Disabled button</a>
+        <a href="javascript:void (0)" class="m3ss-button">Filled button</a>
         <a href="javascript:void (0)" class="m3ss-button tonal">Filled tonal button</a>
         <a href="javascript:void (0)" class="m3ss-button text">Text button</a>
     </div>
-    <div class="buttons" style="display:flex;flex-wrap: wrap;">
+    <div class="common-buttons" style="display:flex;flex-wrap: wrap;">
         <a href="javascript:void (0)" class="m3ss-button filled">123</a>
-        <a href="javascript:void (0)" class="m3ss-button tonal disabled">123</a>
+        <a href="javascript:void (0)" class="m3ss-button tonal">123</a>
         <a href="javascript:void (0)" class="m3ss-button outlined">123</a>
         <a href="javascript:void (0)" class="m3ss-button elevated">123</a>
         <a href="javascript:void (0)" class="m3ss-button text">123</a>
+        <a href="javascript:void (0)" class="m3ss-button text disabled">123</a>
     </div>
-    <div class="buttons-fab" style="display:flex;flex-wrap: wrap;">
+    <div class="icon-buttons" style="display:flex;flex-wrap: wrap;">
+        <a href="javascript:void (0)" class="m3ss-button icon"><span class="material-symbols-outlined">home</span></a>
+        <a href="javascript:void (0)" class="m3ss-button icon selected"><span class="material-symbols-outlined">home</span></a>
 
+        <a href="javascript:void (0)" class="m3ss-button icon outlined"><span class="material-symbols-outlined">add</span></a>
+        <a href="javascript:void (0)" class="m3ss-button icon selected outlined"><span class="material-symbols-outlined">add</span></a>
 
-        <a href="javascript:void (0)" class="m3ss-button fab disabled"><span class="material-symbols-outlined">add</span><label>123123</label></a>
-        <a href="javascript:void (0)" class="m3ss-button fab secondary"><span class="material-symbols-outlined">add</span><label>123123</label></a>
-        <a href="javascript:void (0)" class="m3ss-button fab tertiary"><span class="material-symbols-outlined">add</span><label>123123</label></a>
-        <a href="javascript:void (0)" class="m3ss-button fab surface"><span class="material-symbols-outlined">add</span><label>123123</label></a>
+        <a href="javascript:void (0)" class="m3ss-button icon tonal"><span class="material-symbols-outlined">add</span></a>
+        <a href="javascript:void (0)" class="m3ss-button icon unselected tonal"><span class="material-symbols-outlined">add</span></a>
+        <a href="javascript:void (0)" class="m3ss-button icon selected tonal"><span class="material-symbols-outlined">add</span></a>
+
+        <a href="javascript:void (0)" class="m3ss-button icon filled"><span class="material-symbols-outlined">add</span></a>
+        <a href="javascript:void (0)" class="m3ss-button icon unselected filled"><span class="material-symbols-outlined">add</span></a>
+        <a href="javascript:void (0)" class="m3ss-button icon selected filled"><span class="material-symbols-outlined">add</span></a>
+    </div>
+    <div class="fabs" style="display:flex;flex-wrap: wrap;">
+        <a href="javascript:void (0)" class="m3ss-button fab"><span class="material-symbols-outlined">settings</span></a>
+        <a href="javascript:void (0)" class="m3ss-button fab secondary"><span class="material-symbols-outlined">grade</span></a>
+        <a href="javascript:void (0)" class="m3ss-button fab tertiary"><span class="material-symbols-outlined">favorite</span></a>
+        <a href="javascript:void (0)" class="m3ss-button fab surface"><span class="material-symbols-outlined">settings</span></a>
+        <a href="javascript:void (0)" class="m3ss-button fab disabled"><span class="material-symbols-outlined">add</span></a>
         <a href="javascript:void (0)" class="m3ss-button fab small"><span class="material-symbols-outlined">add</span></a>
         <a href="javascript:void (0)" class="m3ss-button fab large"><span class="material-symbols-outlined">add</span></a>
 
-        <a href="javascript:void (0)" class="m3ss-button fab extened-icon disabled"><span class="material-symbols-outlined">add</span><label>This is a super super looong button the quick brown fox jumps over the lazy dog.</label></a>
-        <a href="javascript:void (0)" class="m3ss-button fab extened-icon"><span class="material-symbols-outlined">add</span><label>This is a super super looong button the quick brown fox jumps over the lazy dog.</label></a>
-        <a href="javascript:void (0)" class="m3ss-button fab extened-icon"><span class="material-symbols-outlined">add</span><label>Start chat</label></a>
-        <a href="javascript:void (0)" class="m3ss-button fab extened-icon"><span class="material-symbols-outlined">add</span><label>Add</label></a>
-        <a href="javascript:void (0)" class="m3ss-button fab extened"><label>Add</label></a>
+        <a href="javascript:void (0)" class="m3ss-button fab extened-icon"><span class="material-symbols-outlined">add</span><label>Extended</label></a>
+        <a href="javascript:void (0)" class="m3ss-button fab extened-icon disabled"><span class="material-symbols-outlined">add</span><label>Extended (Disabled)</label></a>
+        <a href="javascript:void (0)" class="m3ss-button fab extened"><label>Extended Without Icon</label></a>
     </div>
 </body>
 </html>
