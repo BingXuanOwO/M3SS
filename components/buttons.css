@@ -46,6 +46,10 @@
     transition: .3s;
 }
 
+.m3ss-button *{
+    pointer-events: none;
+}
+
 .m3ss-button:active:not(.disabled, .text, .elevated, .outlined, .fab, .icon) {
     box-shadow: 0 1px 5px rgba(0, 0, 0, .4);
 }
@@ -376,6 +380,7 @@
 
 .m3ss-button.icon .m3ss-ripple {
     background-color: var(--md-sys-color-on-surface);
+    filter: blur(5px);
 }
 
 
@@ -456,8 +461,8 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    opacity: .3;
-    filter: blur(4px);
+    opacity: .2;
+    filter: blur(10px);
     transition: .4s;
 }
 
