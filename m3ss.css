@@ -1,5 +1,6 @@
 /*导入所有组件*/
 @import url(./components/buttons.css);
+@import url(./components/top-app-bar.css);
 
 
 :root {
@@ -42,6 +43,9 @@
     --md-sys-color-on-surface-variant: var(--md-sys-color-on-surface-variant-light);
     --md-sys-color-inverse-surface: var(--md-sys-color-inverse-surface-light);
     --md-sys-color-inverse-on-surface: var(--md-sys-color-inverse-on-surface-light);
+
+    --md-sys-typescale-label-small: ;
+
 }
 
 /* @media (prefers-color-scheme: dark) {

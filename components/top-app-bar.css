@@ -1,0 +1,33 @@
+/*===============
+ ====Top Bar====*/
+
+.m3ss-top-app-bar {
+    height: 64px;
+    width: 100%;
+    position: relative;
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    line-height: 28px;
+
+    padding: 0px 4px;
+}
+
+.m3ss-top-app-bar::after {
+    content: "";
+
+    height: 100%;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    
+    position: absolute;
+
+    background-color: var(--md-sys-color-primary);
+    opacity: var(--md-sys-elevation-level1);
+    
+    z-index: -1;
+}
